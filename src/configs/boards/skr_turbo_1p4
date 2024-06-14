@@ -1,7 +1,7 @@
 opt_set MOTHERBOARD BOARD_BTT_SKR_V1_4_TURBO
 
-opt_set SERIAL_PORT 0
-opt_set SERIAL_PORT_2 -1
+opt_set SERIAL_PORT -1
+opt_set SERIAL_PORT_2 0
 opt_set BAUDRATE 115200
 
 opt_set Y_MAX_PIN E1_DIAG_PIN
