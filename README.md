@@ -19,3 +19,5 @@ If you are looking for the latest release, you should go and download it here:
 To build from source, read the [documentation](src#readme).
 
 Nightly builds are found in the "Actions" tab above. Keep an eye out for bugs on nightly builds.
+
+# Fixes for SKR 1.4 Turbo + TFT
