@@ -13,6 +13,31 @@ $CFGDIR/boards/skr_turbo_1p4
 $CFGDIR/accessories/dummy-extruder
 $CFGDIR/accessories/tmc2209
 $CFGDIR/accessories/TFT35_e3_v3_CNC
-$CFGDIR/accessories/no-dual-endstops
+$CFGDIR/boards/skr_turbo_1p4_dual
+
+opt_set EXTRUDERS 0
+opt_set DEFAULT_MAX_FEEDRATE "{ 50, 50, 15 }"
+opt_set DEFAULT_MAX_ACCELERATION "{ 180, 180, 80 }"
+opt_set MANUAL_FEEDRATE "{ 50*60, 50*60, 4*60 }"
+opt_set AXIS_RELATIVE_MODES "{ false, false, false }"
+
+opt_enable \
+    INVERT_X2_VS_X_DIR \
+    INVERT_Y2_VS_Y_DIR
+
+opt_set X2_STOP_PIN X_MAX_PIN
+opt_set Y2_STOP_PIN Y_MAX_PIN
+
+opt_set TEMP_SENSOR_0 999
+opt_set DUMMY_THERMISTOR_999_VALUE 170
+
+opt_disable \
+    MIN_SOFTWARE_ENDSTOPS \
+    SOFT_ENDSTOPS_MENU_ITEM \
+    X_DUAL_ENDSTOPS \
+    Y_DUAL_ENDSTOPS
+
+opt_set X2_DRIVER_TYPE "TMC2209"
+opt_set Y2_DRIVER_TYPE "TMC2209"
 
 export PLATFORMIO_ENV=LPC1769
